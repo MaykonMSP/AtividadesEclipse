@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>Formulário de Contato</title>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+    <div class="container">
+        <h1>Formulário de Contato</h1>
+
+        <p class="descricao">
+            Preencha os campos abaixo para entrar em contato.
+        </p>
+
+        <h:form styleClass="formulario">
+
+            <div class="campo">
+                <h:outputLabel for="nome" value="Nome:" />
+                <h:inputText id="nome" styleClass="input" />
+            </div>
+
+            <div class="campo">
+                <h:outputLabel for="sobrenome" value="Sobrenome:" />
+                <h:inputText id="sobrenome" styleClass="input" />
+            </div>
+
+            <div class="campo">
+                <h:outputLabel for="email" value="E-mail:" />
+                <h:inputText id="email" styleClass="input" />
+            </div>
+
+            <div class="campo">
+                <h:outputLabel for="mensagem" value="Mensagem:" />
+                <h:inputTextarea id="mensagem" styleClass="textarea" />
+            </div>
+
+            <h:commandButton value="Enviar" styleClass="botao" />
+
+        </h:form>
+    </div>
+</h:body>
+</html>
