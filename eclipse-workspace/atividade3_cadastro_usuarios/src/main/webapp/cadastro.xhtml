@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+
+<h:head>
+    <title>Cadastro de Usuários</title>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+    <div class="container">
+        <h1>Cadastro de Usuários</h1>
+
+        <p class="descricao">
+            Digite um nome no campo abaixo e clique em cadastrar para adicioná-lo à lista.
+        </p>
+
+        <h:form styleClass="formulario">
+            <div class="campo">
+                <h:outputLabel for="nome" value="Nome do usuário:" />
+                <h:inputText id="nome" value="#{cadastroUsuarioBean.nome}" styleClass="input" />
+            </div>
+
+            <h:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.cadastrar}" styleClass="botao" />
+
+            <h2>Usuários cadastrados</h2>
+
+            <ul class="lista">
+                <ui:repeat value="#{cadastroUsuarioBean.nomes}" var="usuario">
+                    <li>#{usuario}</li>
+                </ui:repeat>
+            </ul>
+        </h:form>
+    </div>
+</h:body>
+</html>
